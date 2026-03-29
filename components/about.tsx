@@ -48,11 +48,11 @@ export function About() {
             <p className="text-base leading-relaxed text-muted-foreground">
               Je suis étudiant ingénieur à l&apos;{" "}
               <span className="text-foreground font-medium">
-                Ensimag (Grenoble INP – UGA)
+                Ensimag (Grenoble INP - UGA)
               </span>{" "}
               en Ingénierie des Systèmes d&apos;Information. Je recherche un{" "}
               <span className="text-primary font-medium">
-                stage fullstack web de 4 mois
+                stage fullstack web avec la possibilité de pipelines CI/CD de 4 mois
               </span>{" "}
               à partir du{" "}
               <span className="text-foreground font-medium">25 mai 2026</span>{" "}

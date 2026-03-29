@@ -167,7 +167,7 @@ export function Hero() {
           style={{ animationDelay: "0.5s" }}
         >
           {[
-            { value: "3+", label: "Ans d'expérience" },
+            { value: "1", label: "An d'expérience" },
             { value: "5+", label: "Projets réalisés" },
             { value: "3", label: "Stages effectués" },
             { value: "Bac+5", label: "Diplôme visé" },

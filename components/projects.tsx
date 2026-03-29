@@ -21,7 +21,7 @@ const projects: Project[] = [
       "Application web de visioconférence multi-utilisateurs, permettant la communication par vidéo et la messagerie en temps réel.",
     longDescription:
       "Développement d'une application web de visioconférence permettant à plusieurs utilisateurs de communiquer par vidéo et d'échanger des messages pendant une réunion, dans un esprit proche de Zoom.",
-    stack: ["Java", "WebRTC", "Messagerie", "Temps réel", "Web"],
+    stack: ["Java", "WebRTC", "Messagerie", "WebSockets", "Web"],
     codeUrl: "https://github.com/Youssef2josef/VideoChat",
     icon: Video,
     featured: true,
@@ -33,7 +33,7 @@ const projects: Project[] = [
       "Architecture microservices avec Spring Boot, Docker et communication asynchrone via Kafka, avec monitoring et tests complets.",
     longDescription:
       "Conception d'une application en architecture microservices avec Spring Boot, Docker et communication asynchrone via Kafka, avec mise en place du monitoring et d'une couverture de tests.",
-    stack: ["Spring Boot", "Microservices", "Docker", "Kafka", "JUnit", "Mockito"],
+    stack: ["Spring Boot", "Microservices", "Docker", "Kafka", "JUnit", "Mockito", "Spring Security"],
     icon: Package,
     featured: true,
     tag: "Back-end",
