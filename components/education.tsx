@@ -3,8 +3,8 @@ import { SectionHeader } from "./about"
 
 const formations = [
   {
-    school: "Ensimag, Grenoble INP – UGA",
-    period: "2025 – Présent",
+    school: "Ensimag, Grenoble INP - UGA",
+    period: "2025 - Présent",
     diploma: "Diplôme d'ingénieur",
     specialty: "Ingénierie des Systèmes d'Information",
     location: "Grenoble, France",
@@ -14,7 +14,7 @@ const formations = [
   },
   {
     school: "Institut Supérieur d'Informatique (ISI)",
-    period: "2024 – 2025",
+    period: "2024 - 2025",
     diploma: "Diplôme d'ingénieur",
     specialty: "Génie Logiciel",
     location: "Ariana, Tunisie",
@@ -24,13 +24,23 @@ const formations = [
   },
   {
     school: "Institut Supérieur d'Informatique (ISI)",
-    period: "2021 – 2024",
+    period: "2021 - 2024",
     diploma: "Licence",
     specialty: "Sciences de l'informatique",
     location: "Ariana, Tunisie",
     current: false,
     description:
-      "Fondamentaux en algorithmique, programmation, bases de données, réseaux et systèmes d'exploitation.",
+      "Fondamentaux en algorithmique, programmation, bases de données, conception orientée objet, réseaux et systèmes d'exploitation.",
+  },
+  {
+    school: "Lycée Pilot Bourguiba Tunis (LPBT)",
+    period: "2017 - 2021",
+    diploma: "Baccalauréat",
+    specialty: "Mathématiques",
+    location: "Tunis, Tunisie",
+    current: false,
+    description:
+      "Fondamentaux en algorithmique, programmation, mathématiques.",
   },
 ]
 
@@ -48,11 +58,10 @@ export function Education() {
           {formations.map((f, i) => (
             <article
               key={i}
-              className={`relative group flex flex-col gap-4 p-6 rounded-xl border transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 ${
-                f.current
-                  ? "bg-card border-primary/30 hover:border-primary/50"
-                  : "bg-card border-border/60 hover:border-border"
-              }`}
+              className={`relative group flex flex-col gap-4 p-6 rounded-xl border transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 ${f.current
+                ? "bg-card border-primary/30 hover:border-primary/50"
+                : "bg-card border-border/60 hover:border-border"
+                }`}
             >
               {/* Current badge */}
               {f.current && (
@@ -67,11 +76,10 @@ export function Education() {
 
               {/* Icon */}
               <div
-                className={`size-10 flex items-center justify-center rounded-lg border flex-shrink-0 transition-colors ${
-                  f.current
-                    ? "bg-primary/10 border-primary/25 group-hover:bg-primary/15"
-                    : "bg-secondary border-border/60 group-hover:border-primary/20"
-                }`}
+                className={`size-10 flex items-center justify-center rounded-lg border flex-shrink-0 transition-colors ${f.current
+                  ? "bg-primary/10 border-primary/25 group-hover:bg-primary/15"
+                  : "bg-secondary border-border/60 group-hover:border-primary/20"
+                  }`}
               >
                 <GraduationCap
                   size={18}
