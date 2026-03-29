@@ -12,15 +12,16 @@ type Project = {
   icon: React.ElementType
   featured?: boolean
   tag?: string
+  status?: "En cours" | "Terminé"
 }
 
 const projects: Project[] = [
   {
     title: "Application gestion livreur et merchant",
     description:
-      "Plateforme web et mobile de gestion de livraisons locales avec suivi en temps réel et dispatch intelligent.",
+      "Plateforme web et mobile de gestion de livraisons locales, actuellement en cours de développement, avec suivi en temps réel et dispatch intelligent.",
     longDescription:
-      "Conception d’un écosystème logistique complet combinant dashboard web pour commerçants, application mobile pour livreurs et API centrale de dispatch. Le système automatise la transmission des commandes, le suivi GPS en temps réel et la sécurisation des livraisons via un double code de validation.",
+      "Projet fullstack en cours de développement visant à concevoir un écosystème logistique complet combinant dashboard web pour commerçants, application mobile pour livreurs et API centrale de dispatch. Le système automatise la transmission des commandes, le suivi GPS en temps réel et la sécurisation des livraisons via un double code de validation.",
     stack: [
       "Next.js",
       "TypeScript",
@@ -32,11 +33,12 @@ const projects: Project[] = [
       "Socket.io",
       "WooCommerce",
       "Tailwind CSS",
-      "Prisma"
+      "Prisma",
     ],
     icon: Truck,
     featured: true,
-    tag: "Fullstack"
+    tag: "Fullstack",
+    status: "En cours",
   },
   {
     title: "Application Web Video Chat",
@@ -49,6 +51,7 @@ const projects: Project[] = [
     icon: Video,
     featured: true,
     tag: "Backend",
+    status: "Terminé",
   },
   {
     title: "Système de Gestion de Stock & Inventaire",
@@ -60,6 +63,7 @@ const projects: Project[] = [
     icon: Package,
     featured: true,
     tag: "Back-end",
+    status: "Terminé",
   },
   {
     title: "Analyse de CV en NLP",
@@ -73,6 +77,7 @@ const projects: Project[] = [
     icon: BrainCircuit,
     featured: true,
     tag: "IA / NLP",
+    status: "Terminé",
   },
   {
     title: "Jeu Web Tic-Tac-Toe 4x4",
@@ -85,6 +90,7 @@ const projects: Project[] = [
     demoUrl: "https://precious-centaur-a4c695.netlify.app/",
     icon: Grid3X3,
     tag: "Fullstack",
+    status: "Terminé",
   },
   {
     title: "Chat App Java",
@@ -96,6 +102,7 @@ const projects: Project[] = [
     codeUrl: "https://github.com/Youssef2josef/ChatApp",
     icon: MessageSquare,
     tag: "Back-end",
+    status: "Terminé",
   },
 ]
 
@@ -103,11 +110,16 @@ const tagColors: Record<string, string> = {
   Fullstack: "text-primary bg-primary/10 border-primary/20",
   "Back-end": "text-blue-400 bg-blue-400/10 border-blue-400/20",
   "IA / NLP": "text-indigo-300 bg-indigo-400/10 border-indigo-400/20",
+  Backend: "text-blue-400 bg-blue-400/10 border-blue-400/20",
+}
+
+const statusColors: Record<string, string> = {
+  "En cours": "text-amber-400 bg-amber-400/10 border-amber-400/20",
+  Terminé: "text-emerald-400 bg-emerald-400/10 border-emerald-400/20",
 }
 
 export function Projects() {
-  const featured = projects.filter((p) => p.featured)
-  const rest = projects.filter((p) => !p.featured)
+  const orderedProjects = [...projects].sort((a, b) => Number(!!b.featured) - Number(!!a.featured))
 
   return (
     <section id="projets" className="py-24 bg-card/30">
@@ -118,16 +130,8 @@ export function Projects() {
           description="Des projets concrets couvrant le développement fullstack, les microservices, l'IA et le temps réel."
         />
 
-        {/* Featured projects */}
-        <div className="mt-12 grid lg:grid-cols-3 gap-5">
-          {featured.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </div>
-
-        {/* Other projects */}
-        <div className="mt-5 grid sm:grid-cols-2 gap-5">
-          {rest.map((project) => (
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
+          {orderedProjects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
@@ -137,23 +141,34 @@ export function Projects() {
 }
 
 function ProjectCard({ project }: { project: Project }) {
-  const { title, description, stack, codeUrl, demoUrl, extraCode, icon: Icon, tag } = project
+  const { title, description, stack, codeUrl, demoUrl, extraCode, icon: Icon, tag, status } = project
   const noCode = !codeUrl
 
   return (
-    <article className="group flex flex-col gap-4 p-6 rounded-xl bg-card border border-border/60 hover:border-primary/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20">
+    <article className="group h-full flex flex-col gap-4 p-6 rounded-xl bg-card border border-border/60 hover:border-primary/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20">
       {/* Header */}
       <div className="flex items-start justify-between gap-3">
         <div className="size-10 flex items-center justify-center rounded-lg bg-primary/10 border border-primary/20 flex-shrink-0 group-hover:bg-primary/15 transition-colors">
           <Icon size={18} className="text-primary" />
         </div>
-        {tag && (
-          <span
-            className={`px-2 py-0.5 rounded-full text-xs font-medium border ${tagColors[tag] ?? "text-muted-foreground bg-secondary border-border"}`}
-          >
-            {tag}
-          </span>
-        )}
+
+        <div className="flex flex-wrap justify-end gap-2">
+          {tag && (
+            <span
+              className={`px-2 py-0.5 rounded-full text-xs font-medium border ${tagColors[tag] ?? "text-muted-foreground bg-secondary border-border"}`}
+            >
+              {tag}
+            </span>
+          )}
+
+          {status && (
+            <span
+              className={`px-2 py-0.5 rounded-full text-xs font-medium border ${statusColors[status] ?? "text-muted-foreground bg-secondary border-border"}`}
+            >
+              {status}
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Title */}
@@ -161,7 +176,9 @@ function ProjectCard({ project }: { project: Project }) {
         <h3 className="text-base font-bold text-foreground group-hover:text-primary transition-colors">
           {title}
         </h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          {description}
+        </p>
       </div>
 
       {/* Stack */}
@@ -177,7 +194,7 @@ function ProjectCard({ project }: { project: Project }) {
       </div>
 
       {/* Actions */}
-      <div className="flex items-center gap-2 pt-2 border-t border-border/40">
+      <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-border/40">
         {noCode ? (
           <div className="flex items-center gap-1.5 text-xs text-muted-foreground/60">
             <Lock size={11} />
@@ -194,6 +211,7 @@ function ProjectCard({ project }: { project: Project }) {
             Voir le code
           </a>
         )}
+
         {extraCode && (
           <a
             href={extraCode.url}
@@ -205,12 +223,13 @@ function ProjectCard({ project }: { project: Project }) {
             {extraCode.label}
           </a>
         )}
+
         {demoUrl && (
           <a
             href={demoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium text-primary bg-primary/10 border border-primary/20 hover:bg-primary/15 transition-all ml-auto"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium text-primary bg-primary/10 border border-primary/20 hover:bg-primary/15 transition-all sm:ml-auto"
           >
             <ExternalLink size={12} />
             Voir la démo
