@@ -1,7 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Sun, Moon } from "lucide-react"
+import { useTheme } from "next-themes"
 
 const navLinks = [
   { href: "#a-propos", label: "À propos" },
@@ -16,6 +17,12 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
+  const [mounted, setMounted] = useState(false)
+  const { resolvedTheme, setTheme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,27 +92,43 @@ export function Navbar() {
           })}
         </ul>
 
-        {/* CTA - Desktop */}
-        <a
-          href="#contact"
-          onClick={(e) => {
-            e.preventDefault()
-            handleNavClick("#contact")
-          }}
-          className="hidden md:inline-flex items-center gap-2 px-4 py-1.5 rounded-md border border-primary text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-        >
-          Disponible mai 2026
-        </a>
+        {/* Right side actions */}
+        <div className="flex items-center gap-2">
+          {/* Theme toggle */}
+          <button
+            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+            className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200"
+            aria-label="Basculer le thème"
+          >
+            {mounted && resolvedTheme === "dark" ? (
+              <Sun size={18} />
+            ) : (
+              <Moon size={18} />
+            )}
+          </button>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
-          aria-expanded={mobileOpen}
-        >
-          {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+          {/* CTA - Desktop */}
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault()
+              handleNavClick("#contact")
+            }}
+            className="hidden md:inline-flex items-center gap-2 px-4 py-1.5 rounded-md border border-primary text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+          >
+            Disponible mai 2026
+          </a>
+
+          {/* Mobile toggle */}
+          <button
+            className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}

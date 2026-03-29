@@ -7,7 +7,71 @@
    PORTFOLIO THEME – Dark, premium, engineer
    Colors: Navy/Slate dark + Cyan accent
    ========================================= */
+
+/* LIGHT theme (default :root) */
 :root {
+  /* Base palette – clean off-white */
+  --background: oklch(0.98 0.003 220);
+  --foreground: oklch(0.18 0.015 240);
+
+  /* Card surfaces */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.015 240);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.015 240);
+
+  /* Primary – deeper Cyan for light bg */
+  --primary: oklch(0.52 0.15 195);
+  --primary-foreground: oklch(0.98 0.003 220);
+
+  /* Secondary */
+  --secondary: oklch(0.93 0.006 220);
+  --secondary-foreground: oklch(0.25 0.015 240);
+
+  /* Muted */
+  --muted: oklch(0.94 0.005 220);
+  --muted-foreground: oklch(0.50 0.010 220);
+
+  /* Accent */
+  --accent: oklch(0.93 0.010 195);
+  --accent-foreground: oklch(0.52 0.15 195);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  /* Borders */
+  --border: oklch(0.88 0.007 220);
+  --input: oklch(0.92 0.005 220);
+  --ring: oklch(0.52 0.15 195);
+
+  /* Charts */
+  --chart-1: oklch(0.52 0.15 195);
+  --chart-2: oklch(0.50 0.12 230);
+  --chart-3: oklch(0.45 0.10 260);
+  --chart-4: oklch(0.48 0.14 170);
+  --chart-5: oklch(0.55 0.13 210);
+
+  --radius: 0.5rem;
+
+  /* Custom portfolio tokens */
+  --hero-glow: oklch(0.52 0.15 195 / 0.10);
+  --section-divider: oklch(0.88 0.007 220);
+  --tech-badge-bg: oklch(0.93 0.010 195);
+  --tech-badge-text: oklch(0.52 0.15 195);
+
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.18 0.015 240);
+  --sidebar-primary: oklch(0.52 0.15 195);
+  --sidebar-primary-foreground: oklch(0.98 0.003 220);
+  --sidebar-accent: oklch(0.93 0.006 220);
+  --sidebar-accent-foreground: oklch(0.25 0.015 240);
+  --sidebar-border: oklch(0.88 0.007 220);
+  --sidebar-ring: oklch(0.52 0.15 195);
+}
+
+/* DARK theme */
+.dark {
   /* Base palette – dark navy/slate */
   --background: oklch(0.12 0.015 240);
   --foreground: oklch(0.93 0.008 220);
@@ -31,7 +95,7 @@
   --muted: oklch(0.20 0.012 240);
   --muted-foreground: oklch(0.58 0.01 220);
 
-  /* Accent – same as primary but softer */
+  /* Accent */
   --accent: oklch(0.22 0.02 240);
   --accent-foreground: oklch(0.72 0.15 195);
 
