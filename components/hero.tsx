@@ -5,6 +5,16 @@ import { ArrowDown, Github, Linkedin, Mail, Download, FolderOpen } from "lucide-
 
 export function Hero() {
   const heroRef = useRef<HTMLDivElement>(null)
+  const email = "youssef.jouini@grenoble-inp.org"
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email)
+      alert("Adresse email copiée")
+    } catch {
+      alert(email)
+    }
+  }
 
   useEffect(() => {
     const el = heroRef.current
@@ -148,13 +158,12 @@ export function Hero() {
           >
             <Linkedin size={18} />
           </a>
-          <a
-            href="mailto:youssef.jouini@grenoble-inp.org"
-            aria-label="Email"
-            className="p-2 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-200"
+          <button
+            onClick={copyEmail}
+            className="px-3 py-1.5 rounded-md text-xs border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-200"
           >
-            <Mail size={18} />
-          </a>
+            Copier l’email
+          </button>
           <div className="h-4 w-px bg-border" />
           <span className="text-xs font-mono text-muted-foreground">
             Grenoble, France
