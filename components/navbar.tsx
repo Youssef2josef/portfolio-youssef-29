@@ -49,11 +49,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-background/90 backdrop-blur-md border-b border-border/60 shadow-lg shadow-black/20"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo / Name */}
@@ -62,7 +61,7 @@ export function Navbar() {
           className="font-mono text-sm text-primary font-semibold tracking-wider hover:opacity-80 transition-opacity"
           aria-label="Retour en haut"
         >
-          YJ<span className="text-muted-foreground">_</span>
+          Youssef JOUINI<span className="text-muted-foreground">_</span>
         </button>
 
         {/* Desktop Nav */}
@@ -74,11 +73,10 @@ export function Navbar() {
               <li key={href}>
                 <button
                   onClick={() => handleNavClick(href)}
-                  className={`text-sm transition-colors duration-200 font-medium relative after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full ${
-                    isActive
+                  className={`text-sm transition-colors duration-200 font-medium relative after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full ${isActive
                       ? "text-primary after:w-full"
                       : "text-muted-foreground hover:text-foreground"
-                  }`}
+                    }`}
                 >
                   {label}
                 </button>
@@ -112,9 +110,8 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-300 overflow-hidden ${
-          mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        } bg-card/95 backdrop-blur-md border-b border-border/60`}
+        className={`md:hidden transition-all duration-300 overflow-hidden ${mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          } bg-card/95 backdrop-blur-md border-b border-border/60`}
       >
         <ul className="flex flex-col px-6 py-4 gap-1" role="list">
           {navLinks.map(({ href, label }) => (

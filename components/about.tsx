@@ -4,13 +4,13 @@ const highlights = [
   {
     icon: GraduationCap,
     label: "Formation",
-    value: "Ensimag – Grenoble INP",
+    value: "Ensimag - Grenoble INP",
     sub: "Ingénierie des Systèmes d'Information",
   },
   {
     icon: Calendar,
     label: "Disponibilité",
-    value: "25 mai – 13 sept. 2026",
+    value: "25 mai - 13 sept. 2026",
     sub: "Stage fullstack web · 4 mois",
   },
   {
