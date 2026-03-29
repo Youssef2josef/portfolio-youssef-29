@@ -33,7 +33,7 @@ const formations = [
       "Fondamentaux en algorithmique, programmation, bases de données, conception orientée objet, réseaux et systèmes d'exploitation.",
   },
   {
-    school: "Lycée Pilot Bourguiba Tunis (LPBT)",
+    school: "Lycée Pilote Bourguiba Tunis (LPBT)",
     period: "2017 - 2021",
     diploma: "Baccalauréat",
     specialty: "Mathématiques",
@@ -51,7 +51,7 @@ export function Education() {
         <SectionHeader
           label="Formation"
           title="Parcours académique"
-          description="Un double cursus franco-tunisien alliant rigueur académique et pratique du développement logiciel."
+          description="Un double cursus franco-tunisien alliant rigueur académique et pratique du développement web et logiciel tout en acquérant des connaissances les notions en IA et machine learning."
         />
 
         <div className="mt-12 grid md:grid-cols-3 gap-5">
