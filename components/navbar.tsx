@@ -94,18 +94,16 @@ export function Navbar() {
 
         {/* Right side actions */}
         <div className="flex items-center gap-2">
-          {/* Theme toggle */}
-          <button
-            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200"
-            aria-label="Basculer le thème"
-          >
-            {mounted && resolvedTheme === "dark" ? (
-              <Sun size={18} />
-            ) : (
-              <Moon size={18} />
-            )}
-          </button>
+          {/* Theme toggle – only render after mount to avoid hydration mismatch */}
+          {mounted && (
+            <button
+              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+              className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200"
+              aria-label="Basculer le thème"
+            >
+              {resolvedTheme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+          )}
 
           {/* CTA - Desktop */}
           <a

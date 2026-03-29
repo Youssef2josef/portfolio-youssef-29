@@ -1,12 +1,19 @@
 import { put } from '@vercel/blob'
-import { readFileSync } from 'fs'
-import { join } from 'path'
 
-const pdfPath = join(process.cwd(), 'public/CV-Youssef-Jouini-Fullstack-Web.pdf')
+// Fetch the PDF directly from the original blob URL
+const PDF_BLOB_URL = 'https://blobs.vusercontent.net/blob/CV%20Youssef%20Jouini%20-%20Stage%20Fullstack%20web%20Ascanio-odmUEb6WGTKoIXAXS0wQKjR0izzREt.pdf'
 
 async function uploadCV() {
-  console.log('[v0] Reading PDF from:', pdfPath)
-  const fileBuffer = readFileSync(pdfPath)
+  console.log('[v0] Fetching PDF from source URL...')
+  const response = await fetch(PDF_BLOB_URL)
+  if (!response.ok) {
+    throw new Error(`Failed to fetch PDF: ${response.status} ${response.statusText}`)
+  }
+
+  const arrayBuffer = await response.arrayBuffer()
+  const fileBuffer = Buffer.from(arrayBuffer)
+  console.log('[v0] PDF fetched, size:', fileBuffer.byteLength, 'bytes')
+
   const file = new File([fileBuffer], 'CV-Youssef-Jouini-Fullstack-Web.pdf', {
     type: 'application/pdf',
   })
@@ -14,6 +21,7 @@ async function uploadCV() {
   console.log('[v0] Uploading to Vercel Blob...')
   const blob = await put('CV-Youssef-Jouini-Fullstack-Web.pdf', file, {
     access: 'public',
+    addRandomSuffix: false,
   })
 
   console.log('[v0] Upload successful!')
