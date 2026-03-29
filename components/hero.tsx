@@ -30,7 +30,7 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-grid"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden dark:bg-grid"
       style={
         {
           "--mouse-x": "50%",
@@ -109,8 +109,7 @@ export function Hero() {
             Voir mes projets
           </button>
           <a
-            href="/CV-Youssef-Jouini-Fullstack-Web.pdf"
-            download="CV-Youssef-Jouini-Fullstack-Web.pdf"
+            href="/api/download-cv"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-secondary text-secondary-foreground text-sm font-semibold hover:bg-secondary/80 transition-all duration-200 border border-border/60 hover:-translate-y-0.5"
           >
             <Download size={16} />
