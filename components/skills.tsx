@@ -23,7 +23,7 @@ const skillCategories = [
   {
     name: "Bases de données",
     color: "teal",
-    skills: ["PostgreSQL", "MySQL", "Oracle SQL", "MongoDB"],
+    skills: ["PostgreSQL", "MySQL", "MongoDB"],
   },
   {
     name: "DevOps & Outils",
@@ -33,7 +33,7 @@ const skillCategories = [
   {
     name: "IA / Data",
     color: "indigo",
-    skills: ["Python", "NLP", "Traitement de texte", "Arbre de décision"],
+    skills: ["Python", "machine learning", "NLP", "Traitement de texte"],
   },
 ]
 
