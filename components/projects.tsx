@@ -1,4 +1,4 @@
-import { Github, ExternalLink, Video, Grid3X3, BrainCircuit, MessageSquare, Package, Lock } from "lucide-react"
+import { Github, ExternalLink, Video, Grid3X3, BrainCircuit, MessageSquare, Package, Lock, Truck } from "lucide-react"
 import { SectionHeader } from "./about"
 
 type Project = {
@@ -16,6 +16,31 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "Application gestion livreur et merchant",
+    description:
+      "Plateforme web et mobile de gestion de livraisons locales avec suivi en temps réel et dispatch intelligent.",
+
+    longDescription:
+      "Conception d’un écosystème logistique complet combinant dashboard web pour commerçants, application mobile pour livreurs et API centrale de dispatch. Le système automatise la transmission des commandes, le suivi GPS en temps réel et la sécurisation des livraisons via un double code de validation.",
+
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "React Native",
+      "NestJS",
+      "PostgreSQL",
+      "PostGIS",
+      "Redis",
+      "Socket.io",
+      "WooCommerce",
+      "Tailwind CSS",
+      "Prisma"
+    ],
+    icon: Truck,
+    featured: true,
+    tag: "Fullstack"
+  },
+  {
     title: "Application Web Video Chat",
     description:
       "Application web de visioconférence multi-utilisateurs, permettant la communication par vidéo et la messagerie en temps réel.",
@@ -25,7 +50,7 @@ const projects: Project[] = [
     codeUrl: "https://github.com/Youssef2josef/VideoChat",
     icon: Video,
     featured: true,
-    tag: "Fullstack",
+    tag: "Backend",
   },
   {
     title: "Système de Gestion de Stock & Inventaire",
