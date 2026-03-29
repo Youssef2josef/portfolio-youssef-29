@@ -94,8 +94,8 @@ export function Contact() {
                   Envoyer un email
                 </a>
                 <a
-                  href="/cv-youssef-jouini.pdf"
-                  download
+                  href="/CV-Youssef-Jouini-Fullstack-Web.pdf"
+                  download="CV-Youssef-Jouini-Fullstack-Web.pdf"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-secondary text-secondary-foreground text-sm font-semibold border border-border/60 hover:bg-secondary/80 transition-all duration-200 hover:-translate-y-0.5"
                 >
                   <Download size={15} />
