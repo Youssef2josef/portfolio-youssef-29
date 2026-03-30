@@ -71,8 +71,8 @@ export function Contact() {
                 </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Actuellement étudiant à l&apos;Ensimag, je recherche un stage de fin
-                d&apos;études en développement fullstack web. Je suis particulièrement
+                Actuellement étudiant à l&apos;Ensimag, je recherche un stage de 4 mois
+                en développement fullstack web. Je suis particulièrement
                 intéressé par les projets impliquant{" "}
                 <span className="text-primary font-medium">
                   Java , Spring Boot , Angular , React
