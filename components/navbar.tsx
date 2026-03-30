@@ -114,7 +114,7 @@ export function Navbar() {
             }}
             className="hidden md:inline-flex items-center gap-2 px-4 py-1.5 rounded-md border border-primary text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-200"
           >
-            Disponible mai 2026
+            Me contacter
           </a>
 
           {/* Mobile toggle */}
