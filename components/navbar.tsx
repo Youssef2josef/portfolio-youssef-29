@@ -150,7 +150,7 @@ export function Navbar() {
               href="mailto:youssef.jouini@grenoble-inp.org"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-primary text-primary text-sm font-medium"
             >
-              Disponible mai 2026
+              Me contacter
             </a>
           </li>
         </ul>

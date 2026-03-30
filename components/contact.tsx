@@ -75,8 +75,8 @@ export function Contact() {
                 d&apos;études en développement fullstack web. Je suis particulièrement
                 intéressé par les projets impliquant{" "}
                 <span className="text-primary font-medium">
-                  Java / Spring Boot / Angular / React
-                </span>{" "}
+                  Java , Spring Boot , Angular , React
+                </span>{" "}, les technologies <span className="text-primary font-medium">d'IA </span>
                 ou les architectures{" "}
                 <span className="text-primary font-medium">
                   microservices & SaaS
@@ -182,7 +182,7 @@ export function Footer() {
         <div className="flex items-center gap-2">
           <span className="text-sm font-mono text-primary font-semibold">YJ_</span>
           <span className="text-sm text-muted-foreground">
-            Youssef Jouini – Développeur Fullstack Web
+            Youssef Jouini - Développeur Fullstack Web
           </span>
         </div>
         <div className="flex items-center gap-4">
