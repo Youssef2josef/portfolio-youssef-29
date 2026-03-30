@@ -31,7 +31,7 @@ const skillCategories = [
     skills: ["Docker", "GitLab CI/CD", "Git", "Linux", "Kafka", "JUnit", "Mockito"],
   },
   {
-    name: "IA / Data",
+    name: "IA & Data",
     color: "indigo",
     skills: ["Python", "machine learning", "NLP", "Traitement de texte"],
   },
@@ -66,7 +66,7 @@ const categoryStyles: Record<
     dot: "bg-slate-400",
     label: "text-slate-300",
   },
-  "IA / Data": {
+  "IA & Data": {
     card: "border-indigo-400/20 hover:border-indigo-400/40",
     badge: "bg-indigo-400/10 text-indigo-300 border border-indigo-400/20 hover:bg-indigo-400/15",
     dot: "bg-indigo-400",
