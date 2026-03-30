@@ -5,102 +5,85 @@ import { SectionHeader } from "./about"
 
 const skillCategories = [
   {
+    id: "frontend",
     name: "Front-end",
-    description: "Interfaces modernes & expériences utilisateur dynamiques",
-    skills: [
-      { name: "Angular", level: 90 },
-      { name: "React", level: 80 },
-      { name: "TypeScript", level: 85 },
-      { name: "JavaScript", level: 85 },
-      { name: "HTML5", level: 90 },
-      { name: "CSS3", level: 85 },
-    ],
-    colorVar: "primary",
-    borderClass: "border-primary/20 hover:border-primary/50",
-    dotClass: "bg-primary",
-    labelClass: "text-primary",
-    badgeClass: "bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20",
-    barClass: "bg-primary",
-    glowClass: "group-hover:shadow-[0_0_24px_oklch(0.72_0.15_195_/_0.15)]",
+    tagline: "Interfaces modernes",
+    description: "Expériences utilisateur dynamiques, composants réactifs et design systems scalables.",
+    skills: ["Angular", "React", "TypeScript", "JavaScript", "HTML5", "CSS3"],
+    accent: "cyan",
+    accentClass: "text-cyan-400",
+    borderClass: "hover:border-cyan-500/40",
+    dotClass: "bg-cyan-400",
+    badgeClass: "bg-cyan-500/8 text-cyan-300 border-cyan-500/20 hover:bg-cyan-500/15 hover:border-cyan-400/40",
+    glowColor: "oklch(0.72 0.15 195 / 0.12)",
+    lineClass: "bg-cyan-400/60",
+    featured: false,
   },
   {
+    id: "backend",
     name: "Back-end",
-    description: "Services robustes, APIs REST & architectures microservices",
-    skills: [
-      { name: "Java", level: 88 },
-      { name: "Spring Boot", level: 88 },
-      { name: "API REST", level: 85 },
-      { name: "Microservices", level: 78 },
-      { name: "Hibernate", level: 75 },
-      { name: "Spring Security", level: 72 },
-      { name: "Node.js", level: 65 },
-      { name: "Express", level: 62 },
-    ],
-    colorVar: "blue",
-    borderClass: "border-blue-500/20 hover:border-blue-500/50",
+    tagline: "Services robustes",
+    description: "APIs REST, architectures microservices, sécurité applicative et persistance des données.",
+    skills: ["Java", "Spring Boot", "API REST", "Microservices", "Hibernate", "Spring Security", "Node.js", "Express"],
+    accent: "blue",
+    accentClass: "text-blue-400",
+    borderClass: "hover:border-blue-500/40",
     dotClass: "bg-blue-400",
-    labelClass: "text-blue-400",
-    badgeClass: "bg-blue-500/10 text-blue-400 border border-blue-500/20 hover:bg-blue-500/20",
-    barClass: "bg-blue-400",
-    glowClass: "group-hover:shadow-[0_0_24px_oklch(0.60_0.20_240_/_0.15)]",
+    badgeClass: "bg-blue-500/8 text-blue-300 border-blue-500/20 hover:bg-blue-500/15 hover:border-blue-400/40",
+    glowColor: "oklch(0.60 0.20 240 / 0.12)",
+    lineClass: "bg-blue-400/60",
     featured: true,
   },
   {
+    id: "databases",
     name: "Bases de données",
-    description: "Modélisation, requêtes avancées & stockage NoSQL",
-    skills: [
-      { name: "PostgreSQL", level: 80 },
-      { name: "MySQL", level: 78 },
-      { name: "MongoDB", level: 65 },
-    ],
-    colorVar: "teal",
-    borderClass: "border-teal-500/20 hover:border-teal-500/50",
+    tagline: "Modélisation & requêtes",
+    description: "Schémas relationnels avancés, indexation et stockage NoSQL.",
+    skills: ["PostgreSQL", "MySQL", "MongoDB"],
+    accent: "teal",
+    accentClass: "text-teal-400",
+    borderClass: "hover:border-teal-500/40",
     dotClass: "bg-teal-400",
-    labelClass: "text-teal-400",
-    badgeClass: "bg-teal-500/10 text-teal-400 border border-teal-500/20 hover:bg-teal-500/20",
-    barClass: "bg-teal-400",
-    glowClass: "group-hover:shadow-[0_0_24px_oklch(0.70_0.15_185_/_0.15)]",
+    badgeClass: "bg-teal-500/8 text-teal-300 border-teal-500/20 hover:bg-teal-500/15 hover:border-teal-400/40",
+    glowColor: "oklch(0.70 0.15 185 / 0.12)",
+    lineClass: "bg-teal-400/60",
+    featured: false,
   },
   {
+    id: "devops",
     name: "DevOps & Outils",
-    description: "Conteneurisation, CI/CD, tests & bonnes pratiques",
-    skills: [
-      { name: "Docker", level: 78 },
-      { name: "GitLab CI/CD", level: 75 },
-      { name: "Git", level: 88 },
-      { name: "Linux", level: 72 },
-      { name: "Kafka", level: 60 },
-      { name: "JUnit", level: 75 },
-      { name: "Mockito", level: 70 },
-    ],
-    colorVar: "slate",
-    borderClass: "border-slate-400/20 hover:border-slate-400/50",
+    tagline: "CI/CD & conteneurisation",
+    description: "Pipelines automatisés, tests, infrastructure Docker et workflows Git.",
+    skills: ["Docker", "GitLab CI/CD", "Git", "Linux", "Kafka", "JUnit", "Mockito"],
+    accent: "slate",
+    accentClass: "text-slate-300",
+    borderClass: "hover:border-slate-400/40",
     dotClass: "bg-slate-400",
-    labelClass: "text-slate-300",
-    badgeClass: "bg-slate-400/10 text-slate-300 border border-slate-400/20 hover:bg-slate-400/20",
-    barClass: "bg-slate-400",
-    glowClass: "group-hover:shadow-[0_0_24px_oklch(0.60_0.01_240_/_0.15)]",
+    badgeClass: "bg-slate-500/8 text-slate-300 border-slate-400/20 hover:bg-slate-500/15 hover:border-slate-300/40",
+    glowColor: "oklch(0.60 0.01 240 / 0.12)",
+    lineClass: "bg-slate-400/60",
+    featured: false,
   },
   {
-    name: "IA / Data",
-    description: "Machine learning, NLP & intégration de logique intelligente",
-    skills: [
-      { name: "Python", level: 72 },
-      { name: "Machine Learning", level: 60 },
-      { name: "NLP", level: 58 },
-      { name: "Traitement de texte", level: 62 },
-    ],
-    colorVar: "indigo",
-    borderClass: "border-indigo-400/20 hover:border-indigo-400/50",
+    id: "ai",
+    name: "IA & NLP",
+    tagline: "Logique intelligente",
+    description: "Machine learning, traitement du langage naturel et intégration de modèles dans des applications web.",
+    skills: ["Python", "Machine Learning", "NLP", "Traitement de texte"],
+    accent: "indigo",
+    accentClass: "text-indigo-400",
+    borderClass: "hover:border-indigo-400/40",
     dotClass: "bg-indigo-400",
-    labelClass: "text-indigo-300",
-    badgeClass: "bg-indigo-400/10 text-indigo-300 border border-indigo-400/20 hover:bg-indigo-400/20",
-    barClass: "bg-indigo-400",
-    glowClass: "group-hover:shadow-[0_0_24px_oklch(0.65_0.18_280_/_0.15)]",
+    badgeClass: "bg-indigo-500/8 text-indigo-300 border-indigo-500/20 hover:bg-indigo-500/15 hover:border-indigo-400/40",
+    glowColor: "oklch(0.65 0.18 280 / 0.12)",
+    lineClass: "bg-indigo-400/60",
+    featured: false,
   },
 ]
 
-function useInView(ref: React.RefObject<Element | null>, threshold = 0.15) {
+const coreStack = ["Java", "Spring Boot", "Angular", "React", "API REST", "Docker", "CI/CD", "TypeScript"]
+
+function useInView(ref: React.RefObject<Element | null>, threshold = 0.12) {
   const [inView, setInView] = useState(false)
   useEffect(() => {
     const el = ref.current
@@ -120,22 +103,6 @@ function useInView(ref: React.RefObject<Element | null>, threshold = 0.15) {
   return inView
 }
 
-function SkillBar({ level, barClass, delay }: { level: number; barClass: string; delay: number }) {
-  const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref)
-  return (
-    <div ref={ref} className="h-0.5 w-full bg-border/40 rounded-full overflow-hidden">
-      <div
-        className={`h-full rounded-full transition-all duration-700 ease-out ${barClass}`}
-        style={{
-          width: inView ? `${level}%` : "0%",
-          transitionDelay: `${delay}ms`,
-        }}
-      />
-    </div>
-  )
-}
-
 function SkillCard({
   cat,
   index,
@@ -145,110 +112,160 @@ function SkillCard({
 }) {
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref)
+  const [hovered, setHovered] = useState(false)
 
   return (
     <div
       ref={ref}
-      className={`group flex flex-col gap-5 p-6 rounded-2xl bg-card border transition-all duration-500 ${cat.borderClass} ${cat.glowClass} ${cat.featured ? "lg:col-span-2" : ""}`}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className={`group relative flex flex-col gap-6 p-6 rounded-2xl bg-card border border-border/60 transition-all duration-500 overflow-hidden ${cat.borderClass} ${cat.featured ? "lg:col-span-2" : ""}`}
       style={{
         opacity: inView ? 1 : 0,
-        transform: inView ? "translateY(0)" : "translateY(24px)",
-        transition: `opacity 0.5s ease ${index * 80}ms, transform 0.5s ease ${index * 80}ms, border-color 0.3s, box-shadow 0.3s`,
+        transform: inView ? "translateY(0) scale(1)" : "translateY(28px) scale(0.98)",
+        transition: `opacity 0.55s cubic-bezier(0.22,1,0.36,1) ${index * 90}ms, transform 0.55s cubic-bezier(0.22,1,0.36,1) ${index * 90}ms, border-color 0.3s, box-shadow 0.4s`,
+        boxShadow: hovered
+          ? `0 0 0 1px ${cat.glowColor.replace("0.12", "0.3")}, 0 8px 40px -8px ${cat.glowColor}`
+          : undefined,
       }}
     >
-      {/* Header */}
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex flex-col gap-1">
-          <div className="flex items-center gap-2">
-            <span className={`size-2 rounded-full flex-shrink-0 ${cat.dotClass}`} />
-            <span className={`text-sm font-bold font-mono ${cat.labelClass}`}>
+      {/* Ambient glow — top edge */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-px transition-opacity duration-500"
+        style={{
+          background: `linear-gradient(90deg, transparent, ${cat.glowColor.replace("0.12", "0.6")}, transparent)`,
+          opacity: hovered ? 1 : 0,
+        }}
+      />
+
+      {/* Header row */}
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex flex-col gap-1.5">
+          {/* Category label */}
+          <div className="flex items-center gap-2.5">
+            <span
+              className={`size-2 rounded-full flex-shrink-0 transition-all duration-300 ${cat.dotClass}`}
+              style={{ boxShadow: hovered ? `0 0 8px ${cat.glowColor.replace("0.12", "0.8")}` : undefined }}
+            />
+            <span className={`text-xs font-mono font-bold uppercase tracking-[0.12em] ${cat.accentClass}`}>
               {cat.name}
             </span>
           </div>
-          <p className="text-xs text-muted-foreground leading-relaxed pl-4">
-            {cat.description}
+          {/* Tagline */}
+          <p className="text-lg font-semibold text-foreground leading-tight pl-[18px]">
+            {cat.tagline}
           </p>
         </div>
-        <span className="text-xs font-mono text-muted-foreground flex-shrink-0 mt-0.5">
-          {cat.skills.length} techs
-        </span>
+
+        {/* Tech count chip */}
+        <div className="flex-shrink-0 px-2.5 py-1 rounded-full bg-muted/60 border border-border/40">
+          <span className="text-xs font-mono text-muted-foreground">
+            {cat.skills.length} tech{cat.skills.length > 1 ? "s" : ""}
+          </span>
+        </div>
       </div>
 
-      {/* Badges grid */}
+      {/* Description */}
+      <p className="text-sm text-muted-foreground leading-relaxed -mt-2">
+        {cat.description}
+      </p>
+
+      {/* Divider */}
+      <div className="h-px bg-border/40" />
+
+      {/* Skills badges */}
       <div className="flex flex-wrap gap-2">
         {cat.skills.map((skill, i) => (
           <span
-            key={skill.name}
-            className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-all duration-200 cursor-default hover:scale-105 ${cat.badgeClass}`}
+            key={skill}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all duration-200 cursor-default hover:scale-105 hover:-translate-y-0.5 ${cat.badgeClass}`}
             style={{
               opacity: inView ? 1 : 0,
-              transitionDelay: `${index * 80 + i * 40}ms`,
+              transitionDelay: `${index * 90 + i * 35 + 200}ms`,
+              transitionProperty: "opacity, transform, background-color, border-color",
             }}
           >
-            {skill.name}
+            {skill}
           </span>
         ))}
       </div>
 
-      {/* Top-3 skill bars for context */}
-      <div className="flex flex-col gap-2 pt-1 border-t border-border/30">
-        {cat.skills.slice(0, cat.featured ? 4 : 3).map((skill, i) => (
-          <div key={skill.name} className="flex items-center gap-3">
-            <span className="text-xs text-muted-foreground w-28 flex-shrink-0 truncate font-mono">
-              {skill.name}
-            </span>
-            <div className="flex-1">
-              <SkillBar
-                level={skill.level}
-                barClass={cat.barClass}
-                delay={index * 80 + i * 60}
-              />
-            </div>
-            <span className={`text-xs font-mono ${cat.labelClass} w-8 text-right flex-shrink-0`}>
-              {skill.level}%
-            </span>
-          </div>
-        ))}
+      {/* Bottom accent line that grows on hover */}
+      <div className="absolute bottom-0 left-0 h-0.5 w-full overflow-hidden rounded-b-2xl">
+        <div
+          className={`h-full transition-all duration-500 ease-out ${cat.lineClass}`}
+          style={{ width: hovered ? "100%" : "0%" }}
+        />
       </div>
     </div>
   )
 }
 
 export function Skills() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const inView = useInView(sectionRef, 0.05)
+
   return (
-    <section id="competences" className="py-24 bg-card/30">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="competences" className="py-24 bg-card/20">
+      <div ref={sectionRef} className="max-w-6xl mx-auto px-6">
+
         <SectionHeader
           label="Compétences"
           title="Stack technique"
-          description="Un ensemble de technologies modernes couvrant le développement fullstack, le DevOps et l'intelligence artificielle appliquée."
+          description="Un ensemble cohérent de technologies modernes — du front-end au back-end, DevOps inclus — avec un intérêt particulier pour les projets autour de l'IA et du NLP."
         />
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {skillCategories.map((cat, i) => (
-            <SkillCard key={cat.name} cat={cat} index={i} />
+        {/* Core stack highlight — animated in */}
+        <div
+          className="mt-8 flex flex-wrap items-center gap-3"
+          style={{
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateY(0)" : "translateY(12px)",
+            transition: "opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s",
+          }}
+        >
+          <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest mr-1">
+            Core
+          </span>
+          {coreStack.map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/25 hover:bg-primary/20 hover:border-primary/50 transition-all duration-200 cursor-default hover:scale-105"
+            >
+              {tech}
+            </span>
           ))}
         </div>
 
-        {/* Core expertise banner */}
-        <div className="mt-8 p-5 rounded-2xl bg-primary/5 border border-primary/20 flex flex-col sm:flex-row sm:items-center gap-4">
-          <div className="flex items-center gap-2 flex-shrink-0">
-            <span className="text-primary font-mono font-bold text-sm">◆</span>
-            <span className="text-sm font-semibold text-foreground">Expertise principale</span>
+        {/* Cards grid */}
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {skillCategories.map((cat, i) => (
+            <SkillCard key={cat.id} cat={cat} index={i} />
+          ))}
+        </div>
+
+        {/* Bottom note — IA interest */}
+        <div
+          className="mt-8 flex items-start gap-4 p-5 rounded-2xl border border-indigo-500/20 bg-indigo-500/5"
+          style={{
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateY(0)" : "translateY(12px)",
+            transition: "opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s",
+          }}
+        >
+          <div className="flex-shrink-0 mt-0.5 size-7 flex items-center justify-center rounded-md bg-indigo-500/15 border border-indigo-500/25">
+            <span className="text-indigo-400 text-sm font-bold font-mono">∿</span>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {["Java", "Spring Boot", "Angular", "React", "API REST", "Docker", "CI/CD"].map(
-              (tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 rounded-full bg-primary/15 text-primary text-xs font-semibold border border-primary/30 hover:bg-primary/25 transition-colors cursor-default"
-                >
-                  {tech}
-                </span>
-              )
-            )}
+          <div className="flex flex-col gap-1">
+            <p className="text-sm font-semibold text-foreground">
+              Intérêt pour les projets IA, NLP et logiciel intelligent
+            </p>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Je suis particulièrement attiré par les applications combinant développement fullstack et traitement du langage naturel — que ce soit l&apos;intégration de modèles, la construction de pipelines NLP ou le développement de features IA dans un produit web.
+            </p>
           </div>
         </div>
+
       </div>
     </section>
   )
