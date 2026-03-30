@@ -50,7 +50,7 @@ export function Contact() {
         <SectionHeader
           label="Contact"
           title="Travaillons ensemble"
-          description="Je suis disponible pour un stage fullstack web de 4 mois à partir du 25 mai 2026. N'hésitez pas à me contacter."
+          description="Je suis disponible pour un stage fullstack web de 4 mois à partir du 25 mai 2026 jusqu'à 13 septembre 2026. N'hésitez pas à me contacter."
         />
 
         <div className="mt-12 grid lg:grid-cols-2 gap-10 items-start">
@@ -66,13 +66,13 @@ export function Contact() {
                     Disponible pour stage
                   </h3>
                   <p className="text-xs text-muted-foreground mt-0.5">
-                    25 mai 2026 – 13 septembre 2026
+                    25 mai 2026 - 13 septembre 2026
                   </p>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Actuellement étudiant à l&apos;Ensimag, je recherche un stage de fin
-                d&apos;études en développement fullstack web. Je suis particulièrement
+                Actuellement étudiant à l&apos;Ensimag, je recherche un stage de 4 mois
+                en développement fullstack web. Je suis particulièrement
                 intéressé par les projets impliquant{" "}
                 <span className="text-primary font-medium">
                   Java , Spring Boot , Angular , React
