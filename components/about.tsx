@@ -1,23 +1,11 @@
-import { Calendar, MapPin, GraduationCap, Briefcase, Code2, Brain } from "lucide-react"
+import { MapPin, GraduationCap, Briefcase, Code2, Brain, Layers } from "lucide-react"
 
 const highlights = [
   {
     icon: GraduationCap,
     label: "Formation",
-    value: "Ensimag - Grenoble INP",
+    value: "Ensimag – Grenoble INP",
     sub: "Ingénierie des Systèmes d'Information",
-  },
-  {
-    icon: Calendar,
-    label: "Disponibilité",
-    value: "25 mai - 13 sept. 2026",
-    sub: "Stage fullstack web · 4 mois",
-  },
-  {
-    icon: MapPin,
-    label: "Localisation",
-    value: "Grenoble, France",
-    sub: "Mobilité possible",
   },
   {
     icon: Briefcase,
@@ -25,56 +13,61 @@ const highlights = [
     value: "3 stages réalisés",
     sub: "Java · Angular · Spring Boot",
   },
+  {
+    icon: MapPin,
+    label: "Localisation",
+    value: "Grenoble, France",
+    sub: "Mobilité nationale et internationale",
+  },
+  {
+    icon: Layers,
+    label: "Profil",
+    value: "Fullstack & Logiciel",
+    sub: "Web · SaaS · Microservices · IA",
+  },
 ]
 
 const focuses = [
-  { icon: Code2, label: "Développement web & API REST" },
-  { icon: Briefcase, label: "Produits SaaS & microservices" },
-  { icon: Brain, label: "Intelligence artificielle & NLP" },
+  { icon: Code2, label: "Développement web fullstack & API REST" },
+  { icon: Briefcase, label: "Produits SaaS, microservices & architecture cloud" },
+  { icon: Brain, label: "Intelligence artificielle appliquée & NLP" },
 ]
 
 export function About() {
   return (
     <section id="a-propos" className="py-24 bg-background">
       <div className="max-w-6xl mx-auto px-6">
-        <SectionHeader
-          label="À propos"
-          title="Qui suis-je ?"
-        />
+        <SectionHeader label="À propos" title="Qui suis-je ?" />
 
         <div className="mt-12 grid lg:grid-cols-2 gap-12 items-start">
           {/* Text block */}
           <div className="flex flex-col gap-5">
             <p className="text-base leading-relaxed text-muted-foreground">
-              Je suis étudiant ingénieur à l&apos;{" "}
+              Étudiant ingénieur à l&apos;
               <span className="text-foreground font-medium">
-                Ensimag (Grenoble INP - UGA)
+                Ensimag (Grenoble INP – UGA)
               </span>{" "}
-              en Ingénierie des Systèmes d&apos;Information. Je recherche un{" "}
-              <span className="text-primary font-medium">
-                stage fullstack web avec la possibilité de pipelines CI/CD de 4 mois
-              </span>{" "}
-              à partir du{" "}
-              <span className="text-foreground font-medium">25 mai 2026</span>{" "}
-              jusqu&apos;au 13 septembre 2026.
+              en Ingénierie des Systèmes d&apos;Information, je me positionne comme
+              un développeur{" "}
+              <span className="text-primary font-medium">fullstack web et logiciel</span>,
+              capable de prendre en charge aussi bien la conception front-end que la
+              structuration back-end d&apos;une application.
             </p>
             <p className="text-base leading-relaxed text-muted-foreground">
-              Je développe principalement avec{" "}
+              Mon stack principal repose sur{" "}
               <span className="text-primary font-medium">Spring Boot</span> et{" "}
-              <span className="text-primary font-medium">Angular</span>, et j&apos;ai
-              également pratiqué{" "}
+              <span className="text-primary font-medium">Angular</span>, complété par{" "}
               <span className="text-primary font-medium">React</span>, avec une
-              bonne base en{" "}
+              maîtrise solide des{" "}
               <span className="text-foreground font-medium">
-                API REST, microservices, Docker, tests et CI/CD
+                API REST, microservices, Docker, tests unitaires et pipelines CI/CD
               </span>
               .
             </p>
             <p className="text-base leading-relaxed text-muted-foreground">
-              Je souhaite contribuer à la conception et au développement de
-              produits web et SaaS, à la création d&apos;interfaces et de
-              fonctionnalités métier, ainsi qu&apos;à l&apos;amélioration de la qualité
-              logicielle, des performances et de l&apos;expérience utilisateur.
+              Je cherche à contribuer à la conception de produits web et SaaS
+              sérieux — en apportant rigueur technique, capacité d&apos;adaptation
+              rapide et sens des responsabilités sur des sujets concrets.
             </p>
 
             {/* Focus areas */}

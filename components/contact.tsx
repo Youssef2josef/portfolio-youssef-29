@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Github, Linkedin, Download, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin, Download, MessageSquare } from "lucide-react"
 import { SectionHeader } from "./about"
 
 const contactInfo = [
@@ -50,45 +50,44 @@ export function Contact() {
         <SectionHeader
           label="Contact"
           title="Travaillons ensemble"
-          description="Je suis disponible pour un stage fullstack web de 4 mois à partir du 25 mai 2026. N'hésitez pas à me contacter."
+          description="Une opportunité, un projet ou simplement un échange ? Je suis toujours ouvert à une conversation sérieuse."
         />
 
         <div className="mt-12 grid lg:grid-cols-2 gap-10 items-start">
           {/* Left: message & CTAs */}
           <div className="flex flex-col gap-6">
-            <div className="p-6 rounded-xl bg-card border border-border/60 flex flex-col gap-4">
+            <div className="p-6 rounded-2xl bg-card border border-border/60 flex flex-col gap-5">
               <div className="flex items-start gap-3">
-                <div className="size-9 flex items-center justify-center rounded-lg bg-primary/10 border border-primary/20 flex-shrink-0 mt-0.5">
-                  <Send size={15} className="text-primary" />
+                <div className="size-10 flex items-center justify-center rounded-xl bg-primary/10 border border-primary/20 flex-shrink-0 mt-0.5">
+                  <MessageSquare size={16} className="text-primary" />
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-foreground">
-                    Disponible pour stage
+                    Engagé, disponible, sérieux
                   </h3>
                   <p className="text-xs text-muted-foreground mt-0.5">
-                    25 mai 2026 – 13 septembre 2026
+                    Ouverte à toute opportunité correspondant à mon profil
                   </p>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Actuellement étudiant à l&apos;Ensimag, je recherche un stage de fin
-                d&apos;études en développement fullstack web. Je suis particulièrement
-                intéressé par les projets impliquant{" "}
+                Étudiant ingénieur à l&apos;Ensimag, je m&apos;intéresse particulièrement
+                aux projets autour de{" "}
                 <span className="text-primary font-medium">
                   Java / Spring Boot / Angular / React
                 </span>{" "}
-                ou les architectures{" "}
+                et aux architectures{" "}
                 <span className="text-primary font-medium">
-                  microservices & SaaS
+                  microservices, SaaS et cloud
                 </span>
-                .
+                . N&apos;hésitez pas à me contacter pour échanger sur une collaboration.
               </p>
 
               {/* CTA buttons */}
               <div className="flex flex-wrap gap-3 pt-1">
                 <a
                   href="mailto:youssef.jouini@grenoble-inp.org"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg shadow-primary/20 hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg shadow-primary/20 hover:-translate-y-0.5"
                 >
                   <Mail size={15} />
                   Envoyer un email
@@ -96,7 +95,7 @@ export function Contact() {
                 <a
                   href="https://tt4ppr1zm0ieshup.public.blob.vercel-storage.com/CV-Youssef-Jouini-Fullstack-Web.pdf"
                   download="CV-Youssef-Jouini-Fullstack-Web.pdf"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-secondary text-secondary-foreground text-sm font-semibold border border-border/60 hover:bg-secondary/80 transition-all duration-200 hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary text-secondary-foreground text-sm font-semibold border border-border/60 hover:bg-secondary/80 transition-all duration-200 hover:-translate-y-0.5"
                 >
                   <Download size={15} />
                   Télécharger mon CV
@@ -115,7 +114,10 @@ export function Contact() {
                   className="group flex items-center gap-3 p-4 rounded-xl bg-card border border-border/60 hover:border-primary/30 transition-all duration-300 hover:-translate-y-0.5"
                 >
                   <div className="size-9 flex items-center justify-center rounded-lg bg-secondary border border-border/60 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all">
-                    <Icon size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                    <Icon
+                      size={16}
+                      className="text-muted-foreground group-hover:text-primary transition-colors"
+                    />
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-foreground">{label}</p>
@@ -157,15 +159,14 @@ export function Contact() {
               ))}
             </div>
 
-            {/* Availability chip */}
-            <div className="flex items-center gap-3 mt-2 p-4 rounded-xl bg-primary/5 border border-primary/20">
-              <span className="relative flex size-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-                <span className="relative inline-flex rounded-full size-2.5 bg-primary" />
-              </span>
-              <p className="text-sm text-foreground/80">
-                <span className="text-primary font-semibold">Disponible</span> pour
-                entretien et prise de contact immédiate.
+            {/* Professional note */}
+            <div className="flex items-start gap-3 mt-2 p-4 rounded-xl bg-primary/5 border border-primary/20">
+              <span className="text-primary font-mono font-bold text-sm flex-shrink-0 mt-0.5">◆</span>
+              <p className="text-sm text-foreground/80 leading-relaxed">
+                Ouvert à des opportunités de{" "}
+                <span className="text-primary font-semibold">stage</span> ou d&apos;
+                <span className="text-primary font-semibold">alternance</span> dans
+                le développement logiciel, web fullstack et les architectures modernes.
               </p>
             </div>
           </div>

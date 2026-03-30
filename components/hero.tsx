@@ -47,20 +47,21 @@ export function Hero() {
         }}
       />
       {/* Static top glow */}
-      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full opacity-20"
-        style={{ background: "radial-gradient(ellipse, oklch(0.72 0.15 195 / 0.3) 0%, transparent 70%)" }}
+      <div
+        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full opacity-20"
+        style={{
+          background:
+            "radial-gradient(ellipse, oklch(0.72 0.15 195 / 0.3) 0%, transparent 70%)",
+        }}
       />
 
-      <div className="relative max-w-6xl mx-auto px-6 pt-28 pb-20 flex flex-col gap-8">
-        {/* Available badge */}
+      <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-16 flex flex-col gap-7">
+        {/* Role badge */}
         <div className="flex items-center gap-3 animate-fade-in">
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 w-fit">
-            <span className="relative flex size-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-              <span className="relative inline-flex rounded-full size-2 bg-primary" />
-            </span>
+            <span className="size-1.5 rounded-full bg-primary flex-shrink-0" />
             <span className="text-primary text-xs font-mono font-medium tracking-wide">
-              Disponible · Stage 25 mai – 13 sept. 2026
+              Ingénieur logiciel · Fullstack Web
             </span>
           </div>
         </div>
@@ -74,7 +75,7 @@ export function Hero() {
           <p className="text-lg sm:text-xl text-muted-foreground font-medium tracking-wide">
             Étudiant ingénieur Ensimag{" "}
             <span className="text-foreground/70">–</span>{" "}
-            Développeur Fullstack Web
+            Développeur Fullstack &amp; Logiciel
           </p>
         </div>
 
@@ -88,8 +89,8 @@ export function Hero() {
           <TechHighlight>Spring Boot</TechHighlight>,{" "}
           <TechHighlight>Angular</TechHighlight>,{" "}
           <TechHighlight>React</TechHighlight> et{" "}
-          <TechHighlight>SQL</TechHighlight>, avec un intérêt fort pour les
-          produits{" "}
+          <TechHighlight>SQL</TechHighlight> — avec un ancrage solide sur les
+          architectures{" "}
           <TechHighlight>SaaS</TechHighlight>,{" "}
           <TechHighlight>API REST</TechHighlight>,{" "}
           <TechHighlight>microservices</TechHighlight> et{" "}
@@ -167,7 +168,7 @@ export function Hero() {
           style={{ animationDelay: "0.5s" }}
         >
           {[
-            { value: "1", label: "An d'expérience" },
+            { value: "1+", label: "An d'expérience" },
             { value: "5+", label: "Projets réalisés" },
             { value: "3", label: "Stages effectués" },
             { value: "Bac+5", label: "Diplôme visé" },
@@ -182,7 +183,9 @@ export function Hero() {
 
       {/* Scroll indicator */}
       <button
-        onClick={() => document.querySelector("#a-propos")?.scrollIntoView({ behavior: "smooth" })}
+        onClick={() =>
+          document.querySelector("#a-propos")?.scrollIntoView({ behavior: "smooth" })
+        }
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors animate-bounce"
         aria-label="Défiler vers le bas"
       >
@@ -194,7 +197,5 @@ export function Hero() {
 }
 
 function TechHighlight({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="text-primary font-medium">{children}</span>
-  )
+  return <span className="text-primary font-medium">{children}</span>
 }
