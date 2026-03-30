@@ -31,7 +31,7 @@ const skillCategories = [
     skills: ["Docker", "GitLab CI/CD", "Git", "Linux", "Kafka", "JUnit", "Mockito"],
   },
   {
-    name: "IA / Data",
+    name: "Data",
     color: "indigo",
     skills: ["Python", "machine learning", "NLP", "Traitement de texte"],
   },
