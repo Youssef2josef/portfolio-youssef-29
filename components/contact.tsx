@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Github, Linkedin, Download, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react"
 import { SectionHeader } from "./about"
 
 const contactInfo = [
@@ -50,7 +50,7 @@ export function Contact() {
         <SectionHeader
           label="Contact"
           title="Travaillons ensemble"
-          description="Je suis disponible pour un stage fullstack web de 4 mois à partir du 25 mai 2026 jusqu'à 13 septembre 2026. N'hésitez pas à me contacter."
+          description="Je suis disponible pour une alternance fullstack web d'une durée d'un an à partir de septembre 2026. N'hésitez pas à me contacter."
         />
 
         <div className="mt-12 grid lg:grid-cols-2 gap-10 items-start">
@@ -63,15 +63,15 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-foreground">
-                    Disponible pour stage
+                    Disponible pour alternance
                   </h3>
                   <p className="text-xs text-muted-foreground mt-0.5">
-                    25 mai 2026 - 13 septembre 2026
+                    Septembre 2026 - Septembre 2027
                   </p>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Actuellement étudiant à l&apos;Ensimag, je recherche un stage de 4 mois
+                Actuellement étudiant à l&apos;Ensimag, je recherche une alternance d&apos;un an
                 en développement fullstack web. Je suis particulièrement
                 intéressé par les projets impliquant{" "}
                 <span className="text-primary font-medium">
@@ -92,14 +92,6 @@ export function Contact() {
                 >
                   <Mail size={15} />
                   Envoyer un email
-                </a>
-                <a
-                  href="https://tt4ppr1zm0ieshup.public.blob.vercel-storage.com/CV-Youssef-Jouini-Fullstack-Web.pdf"
-                  download="CV-Youssef-Jouini-Fullstack-Web.pdf"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-secondary text-secondary-foreground text-sm font-semibold border border-border/60 hover:bg-secondary/80 transition-all duration-200 hover:-translate-y-0.5"
-                >
-                  <Download size={15} />
-                  Télécharger mon CV
                 </a>
               </div>
             </div>
