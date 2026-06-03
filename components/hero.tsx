@@ -109,8 +109,8 @@ export function Hero() {
             Voir mes projets
           </button>
           <a
-            href="https://tt4ppr1zm0ieshup.public.blob.vercel-storage.com/CV-Youssef-Jouini-Fullstack-Web.pdf"
-            download="CV-Youssef-Jouini-Fullstack-Web.pdf"
+            href="/Alternance_Youssef_Jouini.pdf"
+            download="Alternance_Youssef_Jouini.pdf"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-secondary text-secondary-foreground text-sm font-semibold hover:bg-secondary/80 transition-all duration-200 border border-border/60 hover:-translate-y-0.5"
           >
             <Download size={16} />
