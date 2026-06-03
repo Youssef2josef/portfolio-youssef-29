@@ -60,7 +60,7 @@ export function Hero() {
               <span className="relative inline-flex rounded-full size-2 bg-primary" />
             </span>
             <span className="text-primary text-xs font-mono font-medium tracking-wide">
-              Disponible · Stage 25 mai – 13 sept. 2026
+              Disponible · Alternance septembre 2026 - septembre 2027
             </span>
           </div>
         </div>
