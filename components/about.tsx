@@ -10,8 +10,8 @@ const highlights = [
   {
     icon: Calendar,
     label: "Disponibilité",
-    value: "25 mai - 13 sept. 2026",
-    sub: "Stage fullstack web · 4 mois",
+    value: "Septembre 2026 - Septembre 2027",
+    sub: "Alternance fullstack web · 1 an",
   },
   {
     icon: MapPin,
@@ -50,13 +50,13 @@ export function About() {
               <span className="text-foreground font-medium">
                 Ensimag (Grenoble INP - UGA)
               </span>{" "}
-              en Ingénierie des Systèmes d&apos;Information. Je recherche un{" "}
+              en Ingénierie des Systèmes d&apos;Information. Je recherche une{" "}
               <span className="text-primary font-medium">
-                stage fullstack web avec la possibilité de pipelines CI/CD de 4 mois
+                alternance fullstack web d&apos;une durée d&apos;un an
               </span>{" "}
-              à partir du{" "}
-              <span className="text-foreground font-medium">25 mai 2026</span>{" "}
-              jusqu&apos;au 13 septembre 2026.
+              à partir de{" "}
+              <span className="text-foreground font-medium">septembre 2026</span>{" "}
+              jusqu&apos;à septembre 2027.
             </p>
             <p className="text-base leading-relaxed text-muted-foreground">
               Je développe principalement avec{" "}

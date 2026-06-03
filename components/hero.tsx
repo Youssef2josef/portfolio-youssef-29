@@ -60,7 +60,7 @@ export function Hero() {
               <span className="relative inline-flex rounded-full size-2 bg-primary" />
             </span>
             <span className="text-primary text-xs font-mono font-medium tracking-wide">
-              Disponible · Stage 25 mai – 13 sept. 2026
+              Disponible · Alternance septembre 2026 - septembre 2027
             </span>
           </div>
         </div>
@@ -109,8 +109,8 @@ export function Hero() {
             Voir mes projets
           </button>
           <a
-            href="https://tt4ppr1zm0ieshup.public.blob.vercel-storage.com/CV-Youssef-Jouini-Fullstack-Web.pdf"
-            download="CV-Youssef-Jouini-Fullstack-Web.pdf"
+            href="/Alternance_Youssef_Jouini.pdf"
+            download="Alternance_Youssef_Jouini.pdf"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-secondary text-secondary-foreground text-sm font-semibold hover:bg-secondary/80 transition-all duration-200 border border-border/60 hover:-translate-y-0.5"
           >
             <Download size={16} />

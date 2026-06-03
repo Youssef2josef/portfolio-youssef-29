@@ -19,9 +19,9 @@ const projects: Project[] = [
   {
     title: "Application gestion livreur et merchant",
     description:
-      "Plateforme web et mobile de gestion de livraisons locales, actuellement en cours de développement, avec suivi en temps réel et dispatch intelligent.",
+      "Plateforme web et mobile de gestion de livraisons locales avec suivi en temps réel et dispatch intelligent.",
     longDescription:
-      "Projet fullstack en cours de développement visant à concevoir un écosystème logistique complet combinant dashboard web pour commerçants, application mobile pour livreurs et API centrale de dispatch. Le système automatise la transmission des commandes, le suivi GPS en temps réel et la sécurisation des livraisons via un double code de validation.",
+      "Projet fullstack visant à concevoir un écosystème logistique complet combinant dashboard web pour commerçants, application mobile pour livreurs et API centrale de dispatch. Le système automatise la transmission des commandes, le suivi GPS en temps réel et la sécurisation des livraisons via un double code de validation.",
     stack: [
       "Next.js",
       "TypeScript",
@@ -38,7 +38,8 @@ const projects: Project[] = [
     icon: Truck,
     featured: true,
     tag: "Fullstack",
-    status: "En cours",
+    status: "Terminé",
+    demoUrl: "https://gomile-saas-platform.vercel.app/",
   },
   {
     title: "Application Web Video Chat",
